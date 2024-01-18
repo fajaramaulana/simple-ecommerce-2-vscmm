@@ -24,6 +24,7 @@ return new class extends Migration
                     'user',
                 ]
             )->default('user');
+            $table->string('phone')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
         });

@@ -61,8 +61,12 @@ class AuthenticateController extends Controller
     {
         $request->session()->invalidate();
 
-        $request->session()->regenerateToken();;
+        $request->session()->regenerateToken();
+        $admin = Auth::user()->role === 'admin' ? true : false;
         Auth::logout();
+        if ($admin) {
+            return redirect('/login');
+        }
         return redirect('/');
     }
 

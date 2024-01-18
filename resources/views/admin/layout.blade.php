@@ -36,8 +36,8 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <div id="avatarContainer" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <div id="avatarContainer" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             <img src="{{ asset('image/avatar.png') }}" alt=""
                                 style="border-radius: 50%; width: 40px">
                         </div>
@@ -48,11 +48,17 @@
                             <p
                                 style="margin-top: 8px; color: #000; font-size: 14px; font-style: normal; font-weight: 400;">
                                 {{ Auth::user()->name }}</p>
-                            <p style="color: #000; font-size: 10px; font-style: normal; font-weight: 400;margin-top: -18px; ">
+                            <p
+                                style="color: #000; font-size: 10px; font-style: normal; font-weight: 400;margin-top: -18px; ">
                                 {{ Auth::user()->email }}</p>
                             <hr>
-                            <a href="{{ route('logout') }}"
-                                style="color: #D83A56; font-size: 12px; font-style: normal; font-weight: 400; display: block; text-decoration:none;"><img style="width: 24px; height: 24px;" src="{{ asset('image/power.png') }}" alt=""> KELUAR </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
+                                @csrf
+                            </form>
+                            <a href="#"
+                                style="color: #D83A56; font-size: 12px; font-style: normal; font-weight: 400; display: block; text-decoration:none;"
+                                onclick="event.preventDefault();  console.log('Clicked!'); document.getElementById('logout-form').submit();">
+                                <img style="width: 24px; height: 24px;" src="{{ asset('image/power.png') }}" alt="button"> KELUAR </a>
                         </div>
                     </div>
                 </button>

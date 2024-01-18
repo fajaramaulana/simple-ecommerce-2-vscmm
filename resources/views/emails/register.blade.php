@@ -2,12 +2,14 @@
 <html>
 
 <head>
-    <title>Hi this message is auto generated</title>
+    <title>Welcome to Our Website</title>
 </head>
 
 <body>
     <h1>Hello, {{ $name }}!</h1>
-    <p>Aku lagi ngerjain test terus aku ngirimnya otomatis yang ini. tenang aman kok email kamu gak kenapa kenapa.</p>
+    <p>Welcome to our website. Thank you for registering for this email {{ $email }}. this is your password</p>
+    <br>
+    <b>{{ $password }}</b>
 </body>
 
 </html>

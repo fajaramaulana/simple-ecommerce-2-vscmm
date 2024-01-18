@@ -65,9 +65,7 @@
                     @else
                         <a href="{{ route('login') }}" class="px-3 py-2"
                             style="font-size: 16px; padding-top: 3rem; padding-bottom: 3rem; border: 1px solid #41A0E4; color: #41A0E4; text-decoration: none;">MASUK</a>
-                        {{-- <a href="{{ route('register') }}"  class="px-3 py-2" style="font-size: 16px; padding-top: 3rem; padding-bottom: 3rem; border: 1px solid #41A0E4; background-color: #41A0E4; color: white; text-decoration: none;">DAFTAR</a> --}}
-                        <a href="#" class="px-3 py-2"
-                            style="font-size: 16px; padding-top: 3rem; padding-bottom: 3rem; border: 1px solid #41A0E4; background-color: #41A0E4; color: white; text-decoration: none;">DAFTAR</a>
+                        <a href="{{ route('register') }}"  class="px-3 py-2" style="font-size: 16px; padding-top: 3rem; padding-bottom: 3rem; border: 1px solid #41A0E4; background-color: #41A0E4; color: white; text-decoration: none;">DAFTAR</a>
                     @endif
 
                 </div>

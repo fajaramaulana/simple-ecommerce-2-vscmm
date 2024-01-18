@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Admin</title>
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -30,7 +30,7 @@
         </div>
 
         <div style="width: 50%" class="d-flex justify-content-center align-items-center">
-            <form style="padding: 12vw;" action="{{ route('login') }}" method="POST">
+            <form style="padding: 10vw;" action="{{ route('register') }}" method="POST">
                 @csrf
                 @if (session('error'))
                     <div class="alert alert-danger" role="alert">
@@ -38,39 +38,53 @@
                     </div>
                 @endif
                 <div>
-                    <div style="font-size: 24px;">Selamat Datang</div>
+                    <div style="font-size: 24px;">Registrasi</div>
                 </div>
                 <div style="margin-top: 0.5rem; font-size: 12px; color: #9B9B9B;">
-                    Silahkan masukkan email atau nomor telepon dan password Anda untuk mulai menggunakan aplikasi
+                    Silahkan masukkan nama, email dan nomor telepon Anda untuk mulai mendafar
                 </div>
                 <div style="margin-top: 1rem;">
                     <div class="mb-2">
                         <div>
-                            <label for="email" style="font-size: 12px; margin-bottom: 0.2rem; color: #757575">Email /
-                                Nomor Telpon</label>
+                            <label for="nama"
+                                style="font-size: 12px; margin-bottom: 0.2rem; color: #757575">Nama</label>
                         </div>
                         <div>
-                            <input type="text" class="" id="email" placeholder="Contoh: admin@gmail.com"
+                            <input type="text" class="" id="nama" placeholder="Contoh: Fajar Agus Maulana"
                                 style="padding-top: 0.3rem; padding-bottom: 0.3rem; padding-left: 0.7rem; padding-right: 0.7rem; width: 100%"
-                                name="email" required>
+                                name="nama" required>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <div>
-                            <label for="password"
-                                style="font-size: 12px; margin-bottom: 0.2rem; color: #757575" >Password</label>
+                        <div class="mb-2">
+                            <div>
+                                <label for="phone"
+                                    style="font-size: 12px; margin-bottom: 0.2rem; color: #757575">Nomor Telfon</label>
+                            </div>
+                            <div>
+                                <input type="number" class="" id="phone" placeholder="Contoh: 0808080808"
+                                    style="padding-top: 0.3rem; padding-bottom: 0.3rem; padding-left: 0.7rem; padding-right: 0.7rem; width: 100%"
+                                    name="phone" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
                         </div>
                         <div>
-                            <input type="password" class="" id="password" placeholder="Masukkan password"
-                                style="padding-top: 0.3rem; padding-bottom: 0.3rem; padding-left: 0.7rem; padding-right: 0.7rem; width: 100%"
-                                name="password" required>
+                            <div class="mb-2">
+                                <div>
+                                    <label for="email"
+                                        style="font-size: 12px; margin-bottom: 0.2rem; color: #757575">Email</label>
+                                </div>
+                                <div>
+                                    <input type="email" class="" id="email"
+                                        placeholder="Contoh: fajar@email.com"
+                                        style="padding-top: 0.3rem; padding-bottom: 0.3rem; padding-left: 0.7rem; padding-right: 0.7rem; width: 100%"
+                                        name="email" required>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                style="width: 100%; background-color: #41A0E4; border: 0; color:white; padding: 0.5rem; font-size: 14px;">Daftar</button>
                         </div>
                     </div>
-                    <div>
-                        <button type="submit"
-                            style="width: 100%; background-color: #41A0E4; border: 0; color:white; padding: 0.5rem; font-size: 14px;">MASUK</button>
-                    </div>
-                </div>
             </form>
         </div>
     </div>

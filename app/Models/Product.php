@@ -22,4 +22,14 @@ class Product extends Model
     ];
 
     protected $table = 'products';
+
+    public static function getProductsWelcomePage()
+    {
+        return self::where('status', 1)->select('id', 'product_name', 'product_price', 'product_image')->get();
+    }
+
+    public static function getNewProductsWelcomePage()
+    {
+        return self::where('status', 1)->select('id', 'product_name', 'product_price', 'product_image')->orderBy('created_at', 'desc')->limit(5)->get();
+    }
 }

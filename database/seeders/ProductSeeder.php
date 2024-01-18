@@ -16,14 +16,14 @@ class ProductSeeder extends Seeder
         Product::insert([[
             'product_name' => 'Euodia',
             'product_price' => '1000980',
-            'product_image' => 'https://images.unsplash.com/photo-1612837',
+            'product_image' => 'https://images.unsplash.com/photo-1613521076081-2820f9746a2d',
             'status' => '1',
             'created_at' => now(),
             'updated_at' => now(),
         ], [
             'product_name' => 'Euodia 2',
             'product_price' => '1000982',
-            'product_image' => 'https://images.unsplash.com/photo-1612837',
+            'product_image' => 'https://images.unsplash.com/photo-1613521076081-2820f9746a2d',
             'status' => '1',
             'created_at' => now(),
             'updated_at' => now(),

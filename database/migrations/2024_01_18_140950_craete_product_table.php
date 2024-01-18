@@ -12,22 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // This will create an auto-incremented primary key column named 'id'
             $table->string('product_name', 100);
-            $table->integer('product_price', 100);
+            $table->integer('product_price');
             $table->string('product_image', 100);
-            $table->integer('status', 1);
-            $table->timestamps();
+            $table->integer('status');
+            $table->timestamps(); // This will create 'created_at' and 'updated_at' columns as timestamps
         });
     }
 
-     /**
+    /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('users');
     }
 };

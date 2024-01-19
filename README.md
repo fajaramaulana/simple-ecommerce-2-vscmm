@@ -4,7 +4,7 @@
 
 ## Project Description
 
-Briefly describe your Laravel project and its purpose.
+This Project Simple Ecommerce With Management Product, Management User, and Dashboard Admin
 
 ## Features
 

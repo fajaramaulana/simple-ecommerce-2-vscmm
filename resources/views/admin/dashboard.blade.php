@@ -46,7 +46,7 @@
                                 {{ $productsCount }}
                             </span>
                             <span class="labelling">
-                                User
+                                Produk
                             </span>
                         </h6>
                     </div>
@@ -61,7 +61,7 @@
                                 {{ $productsActiveCount }}
                             </span>
                             <span class="labelling">
-                                User
+                                Produk
                             </span>
                         </h6>
                     </div>
@@ -77,16 +77,16 @@
                     </div>
                     <div>
                         <table class="table">
-                            <thead style="background-color: #41A0E4!important; ">
-                                <tr style="background-color: #41A0E4!important; border-radius: 4px!important;">
+                            <thead style="background-color: #41A0E4!important; border-radius: 6px!important;">
+                                <tr style="background-color: #41A0E4!important; border-radius: 6px!important;">
                                     <th scope="col"
-                                        style="background-color: #41A0E4!important; color: white;font-weight: 400;font-family: 'Rubik', sans-serif">
+                                        style="background-color: #41A0E4!important; border-radius: 6px 0px 0px 6px !important; color: white;font-weight: 400;font-family: 'Rubik', sans-serif">
                                         Produk</th>
                                     <th scope="col"
                                         style="background-color: #41A0E4!important; color: white;font-weight: 400;font-family: 'Rubik', sans-serif">
                                         Tanggal Dibuat</th>
                                     <th scope="col"
-                                        style="background-color: #41A0E4!important; color: white;font-weight: 400;font-family: 'Rubik', sans-serif">
+                                        style="background-color: #41A0E4!important; border-radius: 0px 6px 6px 0px !important; color:white;font-weight: 400;font-family: 'Rubik', sans-serif">
                                         Harga</th>
                                 </tr>
                             </thead>

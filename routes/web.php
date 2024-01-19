@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\WelcomePageController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,5 +39,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/admin/users', [DashboardController::class, 'users'])->name('admin.users');
-    Route::get('/admin/products', [DashboardController::class, 'products'])->name('admin.products');
+    Route::post('/admin/users', [DashboardController::class, 'userCreatePost'])->name('admin.users.create');
+    Route::put('/admin/users/{id}', [DashboardController::class, 'usersUpdate'])->name('admin.users.update');
+
+    Route::get('/admin/products', [ProductsController::class, 'index'])->name('admin.products');
+    Route::post('/admin/products', [ProductsController::class, 'productCreatePost'])->name('admin.product.create');
+    Route::put('/admin/products/{id}', [ProductsController::class, 'updateProduct'])->name('admin.product.update');
 });

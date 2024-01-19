@@ -17,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<body style="width: 100vw; height: 100vh; overflow-y: hidden; overflow-x:hidden; background-color: #F8F8F8;">
+<body style="width: 100vw; height: 100vh;  overflow-x:hidden; background-color: #F8F8F8;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary"
         style="margin: 0!important; padding: 1rem!important; background-color: white!important;">
         <div class="container-fluid">

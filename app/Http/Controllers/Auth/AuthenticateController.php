@@ -98,7 +98,18 @@ class AuthenticateController extends Controller
             return redirect('/register')->with('error', $validator->errors()->first());
         }
 
-        $passwordRandom = $this->generateRandomString();
+        // check if email or phone already registered
+        $checkEmail = User::where('email', $request->email)->first();
+        if ($checkEmail) {
+            return redirect('/register')->with('error', 'Email sudah terdaftar');
+        }
+
+        $checkPhone = User::where('phone', $request->phone)->first();
+        if ($checkPhone) {
+            return redirect('/register')->with('error', 'Nomor telepon sudah terdaftar');
+        }
+
+        $passwordRandom = generateRandomString();
 
         // start transaction
         DB::beginTransaction();
@@ -121,16 +132,4 @@ class AuthenticateController extends Controller
             return redirect('/register')->with('error', 'Gagal mendaftar');
         }       
     }
-
-    function generateRandomString($length = 10) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $randomString = '';
-    
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, strlen($characters) - 1)];
-        }
-    
-        return $randomString;
-    }
-    
 }
